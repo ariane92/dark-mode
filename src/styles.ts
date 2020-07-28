@@ -11,25 +11,26 @@ export const Container = styled.div`
 `;
 
 export const Title = styled.h1`
-    font-size: 32px;
+    font-size: 48px;
     font-weight: bold;
     color: ${({theme}) => theme.text};
 `;
 
 export const Subtitle = styled.span`
-    font-size: 16px;
+    font-size: 12px;
     font-weight: normal;
     color: ${({theme}) => theme.text};
 `;
 
 export const User = styled.a`
-    font-size: 18px;
+    font-size: 12px;
     font-weight: normal;
     color: ${({theme}) => theme.text};
-    text-decoration: underline;
+    text-decoration: underline;    
     &:hover {
         color: ${({theme}) => theme.text};
     }
+    margin-top: 50px;
 `;
 
 export const SwitchButton = styled.button`
@@ -38,6 +39,7 @@ export const SwitchButton = styled.button`
     outline: none;
     border: none;
     background: transparent;
+    
 
     img{
         width: 100%;

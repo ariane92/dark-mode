@@ -4,6 +4,9 @@ import {ThemeProvider} from 'styled-components';
 import {darkTheme, lightTheme} from './theme';
 import { Container, SwitchButton, Title, User, Subtitle } from './styles'
 
+import lightOn from '../src/assets/lightOn.svg';
+import lightOff from '../src/assets/lightOff.svg';
+
 const App: React.FC = () => {
   const [theme, setTheme] = useState('light');
 
@@ -30,14 +33,10 @@ const App: React.FC = () => {
         <Title>{theme} mode</Title>
         <SwitchButton onClick={() => toggleTheme()}>
           {theme === 'dark' ? (
-            <img src="./src/assets/sun.svg" />
-          ) :( <img src="./src/assets/moon.svg" />)}
+            <img src={lightOff} />
+          ) :( <img src={lightOn} />)}
         </SwitchButton>
-        <Subtitle className="mt4"> by: <User href="" target="_black" className="ml2">@arianemateus
-
-        </User>
-
-        </Subtitle>
+       <User href="https://www.linkedin.com/in/ariane-mateus/" target="_black" className="ml2">@arianemateus</User>    
       </Container>
     </ThemeProvider>
   );
